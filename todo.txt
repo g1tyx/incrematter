@@ -1,0 +1,33 @@
+? = Not done.
+! = Done.
+
+Version 0.0.1 [Initialization] - COMPLETED
+Stuff to do for this version:
+    1. Update all generator values with variables in main.js.                                           !
+    2. Add a number formatting system (up to 1e15).                                                     !
+    3. Add the main production loop.                                                                    !
+    4. Make buttons red when unbuyable and green when buyable, always black text on white when hovered. !
+    5. Make the generator "per second percentages" work.                                                !
+    6. Add formula for generator efficiency (every 10 purchases of said generator).                     !
+    7. Make generators gradually show up by using their initial costs.                                  !
+    8. Make generators increase price (every 10 purchases of said generator).                           !
+    9. Add text that shows you when the next generator is going to be visible.                          !
+    10. Create the different tabs, with just some placeholder text.                                     !
+
+The basics are all done!
+
+Version 0.0.2 [Second Initialization]
+Stuff to do for this version:
+    1. Add best matter, total matter and spent matter in the statistics tab.                            !
+    2. Add exporting and importing in the options tab.                                                  !
+    3. Add the first micro-prestige layer: booster.                                                     !
+    This gives a boost to all of the generators at the cost of resetting the game from the start.
+    Formula for the multiplier is (matter/1e4)^(1/30) (the 30th root of matter divided by 10,000).      
+    4. Make it so the generator "per second percentages" only show up when the next one is visible.     !
+    5. Upload the game on GitHub and add a website for it too so the game goes semi-public.             ?
+    6. Add offsite-links (changelog, how to play and credits).                                          ?
+
+Version 0.0.3 [Getting There]
+Stuff to do for this version:
+    1. Progress bar (to show you what unlocks when).
+    

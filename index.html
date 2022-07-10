@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Incrematter</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+        <div>
+            <div style="position: absolute; bottom: 0.5%; left: 0.25%">    
+                <p>Version 0.0.2</p>
+                <p>"Initialization"</p>
+            </div>
+            
+            <div  style="position: absolute; bottom: 1%; right: 0.25%">
+                <a href="offsite-links/changelog.html">Changelog (not completed)</a>
+            </div>
+        </div>
+
+        <p class="crt bgt">You have <span id="matteramt">0</span> matter.</p>
+        <p class="crt">You are currently gaining <span id="matterpersec">0</span> matter per second.</p>
+        <br>
+
+        <div style="text-align: center">
+            <button class="tabBtn" onclick="changeTab('generators')">Generators</button>
+            <button class="tabBtn" onclick="changeTab('options')">Options</button>
+            <button class="tabBtn" onclick="changeTab('statistics')">Statistics</button>
+        </div>
+        <br>
+
+        <div id="generatorsTab" style="display: revert">
+            <table id="gens">
+                <tr id="gen1">
+                    <td style="width: 40%">1st generator <span id="ng1mu" class="ngenmul">1.00x</span></td>
+                    <td style="width: 40%"><span id="ng1am">0</span> <span id="ng1bg">[0]</span> <span id="ng1pps" class="trt">(+0.00%/s)</span></td>
+                    <td style="width: 20%"><button class="genBtn" id="genBtn1" onclick="buynormalgen(1)"><span id="ng1pr" class="bdt">0</span> matter</button></td>
+                </tr>
+
+                <tr id="gen2">
+                    <td style="width: 40%">2nd generator <span id="ng2mu" class="ngenmul">1.00x</span></td>
+                    <td style="width: 40%"><span id="ng2am">0</span> <span id="ng2bg">[0]</span> <span id="ng2pps" class="trt">(+0.00%/s)</span></td>
+                    <td style="width: 20%"><button class="genBtn" id="genBtn2" onclick="buynormalgen(2)"><span id="ng2pr" class="bdt">0</span> matter</button></td>
+                </tr>
+
+                <tr id="gen3">
+                    <td style="width: 40%">3rd generator <span id="ng3mu" class="ngenmul">1.00x</span></td>
+                    <td style="width: 40%"><span id="ng3am">0</span> <span id="ng3bg">[0]</span> <span id="ng3pps" class="trt">(+0.00%/s)</span></td>
+                    <td style="width: 20%"><button class="genBtn" id="genBtn3" onclick="buynormalgen(3)"><span id="ng3pr" class="bdt">0</span> matter</button></td>
+                </tr>
+
+                <tr id="gen4">
+                    <td style="width: 40%">4th generator <span id="ng4mu" class="ngenmul">1.00x</span></td>
+                    <td style="width: 40%"><span id="ng4am">0</span> <span id="ng4bg">[0]</span></td>
+                    <td style="width: 20%"><button class="genBtn" id="genBtn4" onclick="buynormalgen(4)"><span id="ng4pr" class="bdt">0</span> matter</button></td>
+                </tr>
+            </table>
+            <br>
+
+            <p id="nextgenmatter" class="crt smt">The next generator will show up when you get to x matter.</p>
+            <br>
+            <div id="genboosterdiv" class="centerDiv">
+                <button class="gbstbtn" onclick="genBooster()">Reset progress for a <span id="ratiogenbooster">[x]</span>x to all generators.<br>(<span id="currentgenbooster">[x]</span>x → <span id="pendinggenbooster">[x]</span>x) </button>
+            </div>
+        </div>
+
+        <div id="optionsTab" class="centerDiv" style="display: none">
+            <button class="optsaveBtn" onclick="expimp(0)">Export</button> <!-- 0 is exporting -->
+            <button class="optsaveBtn" onclick="expimp(1)">Import</button> <!-- 1 is importing -->
+            <br>
+        </div>
+
+        <div id="statisticsTab" style="display: none;">
+            <p class="statstext">Your all time gained matter is <span id="allgainmatter">0</span>.</p>
+            <p class="statstext">The highest amount of matter that you've ever gotten is <span id="highestmatter">10</span>.</p>
+            <p class="statstext">You have spent <span id="spentmatter">10</span> matter.</p>
+        </div>
+        
+        <script src="js/lib/ExpantaNum.js"></script> <!-- Libraries-->
+        <script src="js/main.js"></script>           <!-- Main scripts-->
+    </body>
+</html>
