@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+:root {
+    --mlpx: 4px;
+    --mrpx: 4px;
+    --mattercol: rgb(169, 175, 255);
+    --dngc1: rgb(255, 100, 100); /* "Disabled normal generator color 1" */
+    --dngc2: rgb(75, 20, 20); /* "Disabled normal generator color 2" */
+    --bngc1: rgb(100, 255, 100); /* "Buyable normal generator color 1" */
+    --bngc2: rgb(15, 60, 15); /* "Buyable norma generator color 2" */
+    
+}
+
+body {
+    background: rgb(29, 29, 29)
+}
+
+p {
+    font-family: Source Code Pro;
+    font-size: 16px;
+    color: white;
+    margin: auto;
+    transform: skew(-3deg);
+}
+
+a {
+    font-family: Source Code Pro;
+    color: rgb(177, 255, 132);
+    text-decoration: none;
+    transition-duration: 100ms;
+}
+
+a:hover {
+    color: rgb(139, 199, 104)
+}
+
+.crt {
+    text-align: center;
+}
+
+.bgt {
+    font-size: 22px;
+}
+
+.trt {
+    opacity: 0.5;
+}
+
+.bdt {
+    font-weight: 700;
+}
+
+.itt {
+    transform: skew(-6deg);
+}
+
+.centerDiv {
+    text-align: center;
+}
+
+
+.tabBtn {
+    font-size: 24px;
+    font-family: Source Code Pro;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    margin-left: var(--mlpx);
+    margin-right: var(--mrpx);
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.tabBtn:hover {
+    color: black;
+    background-color: white;
+}
+
+.genBtn {
+    font-family: Source Code Pro;
+    font-size: 14px;
+    border: 2px solid;
+    background-color: var(--bngc2);
+    transition-duration: 150ms;
+    cursor: pointer;
+    color: var(--bngc1);
+    border-color: var(--bngc1);
+    width: 100%;
+    height: 26px;
+    text-align: center;
+    box-shadow: 1px 1px 2px;
+    transform: skew(-10deg);
+}
+
+.genBtn.unbuyable {
+    color: var(--dngc1);
+    border-color: var(--dngc1);
+    background-color: var(--dngc2);
+}
+
+.genBtn:hover {
+    color: black;
+    border-color: white;    
+    background-color: white;
+}
+
+.ngenmul {
+    font-weight: 700;
+    font-size: 24px;
+    text-shadow: 0px 0px 12px;
+}
+
+.statstext {
+    font-size: 16px;
+    text-align: center;
+}
+
+.optsaveBtn {
+    width: 100px;
+    height: 35px;
+    padding-top: 0px;
+    font-size: 16px;
+    font-family: "Source Code Pro";
+    color: white;
+    background: rgb(41, 41, 41);
+    border: 2px solid white;
+    border-radius: 2px;
+    margin: 0px 4px 15px 4px;   
+    box-shadow: 1px 1px 4px white;
+    transition-duration: 125ms;
+    cursor: pointer;
+    
+}
+
+.optsaveBtn:hover {
+    color: black;
+    background-color: white;
+}
+
+.gbstbtn {
+    font-family: Source Code Pro;
+    font-size: 14px;
+    background-color: rgb(1, 37, 7);
+    color: rgb(116, 255, 116);
+    padding: 4px 7px 4px 7px;
+    border: 2px solid rgb(116, 255, 116);
+    transform: skew(-3deg);
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 150ms;
+}
+
+.gbstbtn:hover {
+    background-color: rgb(116, 255, 116);
+    color: black;
+}
+
+#matteramt {
+    font-size: 34px;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px var(--mattercol);
+    color: var(--mattercol)
+}
+
+#gens {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 20px;
+    color: white;
+    font-family: Source Code Pro;
+}
