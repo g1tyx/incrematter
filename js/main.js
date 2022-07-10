@@ -2,7 +2,7 @@
 
 var player = {
     currencies: {
-        matter: new ExpantaNum("1544444440"),
+        matter: new ExpantaNum("10"),
         mattertotal: new ExpantaNum("0"), // All-time gained matter.
         highestmatter: new ExpantaNum("0"),  // Highest amount of matter you've ever gotten.
         spentmatter: new ExpantaNum("0")
