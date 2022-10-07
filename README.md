@@ -1,2 +1,2 @@
-# incrematter
-An incremental game with some numbers.
+# Incrematter
+Nothing much... for now.
