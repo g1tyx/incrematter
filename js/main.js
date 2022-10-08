@@ -110,7 +110,7 @@ function buynormalgen(n) { // Function for buying normal generators
 function maxnormalgen() { // Function to max out all gens. This prioritizes highest to lowest. [THIS WILL BE MASSIVELY OPTIMIZED IN THE NEAR FUTURE]
     for (i = 0; i < player.generators.normal.total; i++) {
         while (true) {
-            if (ExpantaNum.lte(player.currencies.matter, player.generators.normal[4-i].cost)) {
+            if (ExpantaNum.lt(player.currencies.matter, player.generators.normal[4-i].cost)) {
                 break
             }
 
@@ -265,7 +265,7 @@ function update() {
         player.stats.highestmatter = player.currencies.matter
     }
 
-    player.generators.normal.pgbm = ExpantaNum.max(ExpantaNum.mul(ExpantaNum.pow(ExpantaNum.sub(ExpantaNum.log10(player.currencies.matter), 10), 2), 2), 2) // ((log10 matter) - 10)^2 * 2
+    player.generators.normal.pgbm = ExpantaNum.max(ExpantaNum.pow(ExpantaNum.sub(ExpantaNum.log10(ExpantaNum.max(player.currencies.matter, "1e10")), 9), 2), player.generators.normal.cgbm)
 
     if (ExpantaNum.gt(player.currencies.matter, "1e10")) {
         player.generators.normal.vgbm = true
@@ -297,10 +297,10 @@ function update() {
             document.getElementById("unlreq").innerHTML = "Requires → " + format(player.unlocks.list[i][0]) + " matter."
             player.unlocks.percent = ExpantaNum.max(ExpantaNum.min(ExpantaNum.div(ExpantaNum.log10(player.currencies.matter), ExpantaNum.log10(player.unlocks.list[i][0])).mul(100), 100), 0)
         } else {
-
             document.getElementById("progtext").innerHTML = "Completed."
             document.getElementById("whatunlocks").innerHTML = "Nothing left."
             document.getElementById("unlreq").innerHTML = "─"
+            player.unlocks.percent = 100
         }
     } 
 
