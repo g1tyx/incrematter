@@ -143,7 +143,7 @@ function expimp(which) { // Exporting and importing (0 = export | 1 = import). C
     if (which === 0) {
         var exp = btoa(JSON.stringify(player))
         navigator.clipboard.writeText(exp).then(() => {
-            alert('Succesfully copied to clipboard.')
+            alert('存档已复制到剪切板。')
         })} else {
             player = JSON.parse(atob(document.getElementById("importbox").value))
         }
